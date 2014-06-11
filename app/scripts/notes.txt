@@ -1,0 +1,19 @@
+
+@see : http://angularjs4u.com/
+Does a form contain new data?
+I needed to implement a functionality that would warn the user about
+changed data in a form when the user tried to navigate away from the form.
+Luckily, in AngularJS this is very easy. You just use the $dirty variable. Just like so:
+
+
+$scope.back = function($event, ConfirmBackText) {
+  $event.preventDefault();
+  if ($scope.mainform.$dirty) {
+    if (confirm(ConfirmBackText)) {
+      window.history.back();
+    }
+  } else {
+    window.history.back();
+  }
+};
+

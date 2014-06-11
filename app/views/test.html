@@ -1,0 +1,20 @@
+<h2>Tests !</h2>
+
+<table class="selectors">
+    <tr>
+        <td>{{$index}}
+            <select ng-model="firstSelected" ng-options="item.label for item in firstList">
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select ng-model="secondSelected" ng-options="item.label for item in secondList">
+            </select>
+        </td>
+    </tr>
+</table>
+
+<p>
+    Result on selected values is <strong>{{fullValueResult}}</strong>
+</p>

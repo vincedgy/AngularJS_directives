@@ -1,0 +1,6 @@
+<h2>Home !</h2>
+<select ng-model="selected" ng-options="item.fname+' '+item.lname group by item.firstLetter for item in things">
+</select><span ng-show="nItems">{{nItems}}</span>
+
+<p>Selected is : {{selected.fname}}&nbsp;{{selected.lname}}</p>
+
